@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config",
+  "version": "0.0.1",
+  "description": "ESLint shareable config for the 6RS style",
+  "license": "Apache-2.0",
+  "repository": "6RiverSystems/eslint-config",
+  "author": "6 River Systems",
+  "engines": {
+    "node": ">=7.4.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "6river",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jscs",
+    "jshint",
+    "jslint",
+    "eslint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "devDependencies": {
+    "eslint": "^3.8.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.8.1"
+  }
+}
