@@ -34,9 +34,11 @@
     "enforce",
     "hint"
   ],
-  "devDependencies": {
-    "eslint": "^3.15.0",
+  "depdendencies": {
     "eslint-config-defaults": "9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0"
   },
   "peerDependencies": {
     "eslint": ">=3.15.0"
