@@ -34,7 +34,7 @@
     "enforce",
     "hint"
   ],
-  "depdendencies": {
+  "dependencies": {
     "eslint-config-defaults": "9.0.0"
   },
   "devDependencies": {
