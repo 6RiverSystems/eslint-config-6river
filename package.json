@@ -12,7 +12,7 @@
     "test": "node test/test.js"
   },
   "files": [
-    "index.js"
+    "*.js"
   ],
   "keywords": [
     "6river",
