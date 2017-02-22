@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	'extends': './index.js',
+	'extends': '6river',
 	'plugins': [
 		'mocha'
 	],

@@ -2,7 +2,7 @@
 
 module.exports = {
 	'parser': 'typescript-eslint-parser',
-	'extends': './index.js',
+	'extends': '6river',
 	'plugins': [
 		'typescript'
 	],
