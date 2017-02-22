@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-6river",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESLint shareable config for the 6RS style",
   "license": "Apache-2.0",
   "repository": "6RiverSystems/eslint-config-6river",
@@ -35,7 +35,7 @@
     "hint"
   ],
   "dependencies": {
-    "eslint-config-defaults": "9.0.0"
+    "eslint-config-google": "^0.7.1"
   },
   "devDependencies": {
     "eslint": "^3.15.0"

@@ -1,7 +1,7 @@
 'use strict';
 
 const config = {
-	'extends': 'defaults/configurations/google',
+	'extends': 'google',
 	'rules': {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
