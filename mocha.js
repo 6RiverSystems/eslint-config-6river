@@ -6,7 +6,7 @@ module.exports = {
 		'mocha'
 	],
 	'rules': {
-		'no-console': [1],
+		'no-console': [warn],
 		'mocha/no-exclusive-tests': 'error',
 	},
 	env: {

@@ -7,7 +7,9 @@ module.exports = {
 		'typescript'
 	],
 	'rules': {
-		'no-undef': [0],
+		'no-undef': 'off',
+		'no-unused-vars': 'off',
+		'typescript/no-triple-slash-reference': 'error'
 	},
 	'parserOptions': {
 		'sourceType': 'module'

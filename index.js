@@ -12,7 +12,8 @@ const config = {
 		'no-undef': ['error'],
 		'no-var': ['error'],
 		'strict': ['error', 'global'],
-		'eqeqeq': 'error'
+		'eqeqeq': 'error',
+		'require-jsdoc': 'off'
 	},
 	'env': {
 		'node': true,
