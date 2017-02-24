@@ -9,7 +9,6 @@ module.exports = {
 	'rules': {
 		'no-invalid-this': 'off',
 		'babel/new-cap': 'warn',
-		'babel/no-await-in-loop': 'warn',
 		'angular/module-setter': 'off',
 		'angular/module-getter': 'off',
 		'angular/no-service-method': 'off',
