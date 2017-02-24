@@ -12,6 +12,8 @@ const config = {
 		'no-undef': ['error'],
 		'no-var': ['error'],
 		'strict': ['error', 'global'],
+		'object-shorthand': 'error',
+		'no-await-in-loop': 'error',
 		'eqeqeq': 'error',
 		'require-jsdoc': 'off'
 	},
