@@ -23,18 +23,27 @@ const conf = require('../');
 // The source files to lint.
 const repoFiles = [
 	'index.js',
+	'mocha.js',
+	'typescript.js',
+	'angular.js',
 	'test/test.js',
 ];
 
 // Use the rules defined in this repo to test against.
 const eslintOpts = {
-	envs: ['node', 'es6'],
 	useEslintrc: false,
+	envs: ['node', 'es6'],
+	parserOptions: {ecmaVersion: 6},
 	rules: conf.rules,
 };
 
 // Runs the linter on the repo files and asserts no errors were found.
-const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
+const cli = new eslint.CLIEngine(eslintOpts);
+const formatter = cli.getFormatter();
+const report = cli.executeOnFiles(repoFiles);
+
+console.log(formatter(report.results)); // eslint-disable-line
+
 assert.equal(report.errorCount, 0);
 assert.equal(report.warningCount, 0);
 repoFiles.forEach((file, index) => {

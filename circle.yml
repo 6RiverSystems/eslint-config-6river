@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 7.5.0
+  environment:
+    MOCHA_OPTS: --reporter mocha-junit-reporter --reporter-options mochaFile=$CIRCLE_TEST_REPORTS/mocha/junit.xml
+
+dependencies:
+  pre:
+    - 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+
+test:
+  override:
+    - npm test
+
+deployment:
+  all:
+    branch: /.*/
+    commands:
+      - ./scripts/release.sh
+

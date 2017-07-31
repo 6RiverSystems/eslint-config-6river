@@ -12,6 +12,8 @@ const config = {
 		'no-undef': ['error'],
 		'no-var': ['error'],
 		'strict': ['error', 'global'],
+		'object-shorthand': 'error',
+		'no-await-in-loop': 'error',
 		'eqeqeq': 'error',
 		'require-jsdoc': 'off'
 	},
@@ -19,12 +21,10 @@ const config = {
 		'node': true,
 		'es6': true,
 	},
-	'ecmaFeatures': {
-		'modules': true,
-		'classes': true,
-		'arrowFunctions': true,
-		'blockBindings': true,
-		'templateStrings': true
+	'parserOptions': {
+		'ecmaVersion': 6,
+		'ecmaFeatures': {
+		}
 	}
 };
 
