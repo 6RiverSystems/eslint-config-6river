@@ -9,12 +9,8 @@ dependencies:
     - 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
 
 test:
-  pre:
-    - mkdir -p $CIRCLE_TEST_REPORTS/mocha
   override:
     - npm test
-  post:
-    - mv coverage $CIRCLE_TEST_REPORTS
 
 deployment:
   all:
