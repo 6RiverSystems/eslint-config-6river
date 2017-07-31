@@ -21,12 +21,10 @@ const config = {
 		'node': true,
 		'es6': true,
 	},
-	'ecmaFeatures': {
-		'modules': true,
-		'classes': true,
-		'arrowFunctions': true,
-		'blockBindings': true,
-		'templateStrings': true
+	'parserOptions': {
+		'ecmaVersion': 6,
+		'ecmaFeatures': {
+		}
 	}
 };
 
