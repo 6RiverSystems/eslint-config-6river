@@ -5,7 +5,9 @@ const config = {
 	'rules': {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
-		'indent': ['error', 'tab'],
+		'indent': ['error', 'tab', {
+			'MemberExpression': 0
+		}],
 		'dot-location': ['error', 'property'],
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-console': ['error'],
