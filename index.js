@@ -8,6 +8,7 @@ const config = {
 		'indent': ['error', 'tab', {
 			'MemberExpression': 0
 		}],
+		'no-tabs': 'off',
 		'dot-location': ['error', 'property'],
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-console': ['error'],
