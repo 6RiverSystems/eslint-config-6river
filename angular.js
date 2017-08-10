@@ -26,4 +26,8 @@ module.exports = {
 	'plugins': [
 		'babel'
 	],
+	'parserOptions': {
+		'ecmaVersion': 6,
+		'sourceType': 'module',
+	},
 };
