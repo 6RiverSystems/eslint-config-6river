@@ -13,6 +13,9 @@ module.exports = {
 		'angular/module-getter': 'off',
 		'angular/no-service-method': 'off',
 		'angular/log': 'off',
+		'angular/service-name': [2, {
+			'oldBehavior': false, // Suppress deprecation warning
+		}],
 	},
 	'env': {
 		'browser': true,
@@ -23,4 +26,8 @@ module.exports = {
 	'plugins': [
 		'babel'
 	],
+	'parserOptions': {
+		'ecmaVersion': 6,
+		'sourceType': 'module',
+	},
 };
