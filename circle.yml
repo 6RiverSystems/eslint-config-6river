@@ -17,4 +17,3 @@ deployment:
     branch: /.*/
     commands:
       - ./scripts/release.sh
-
