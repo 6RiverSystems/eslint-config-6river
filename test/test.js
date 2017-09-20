@@ -23,14 +23,18 @@ const conf = require('../');
 // The source files to lint.
 const repoFiles = [
 	'index.js',
+	'mocha.js',
+	'typescript.js',
+	'angular.js',
 	'test/test.js',
 ];
 
 // Use the rules defined in this repo to test against.
 const eslintOpts = {
+	useEslintrc: false,
 	envs: ['node', 'es6', 'mocha'],
 	'plugins': ['mocha'],
-	useEslintrc: false,
+	parserOptions: {ecmaVersion: 6},
 	rules: conf.rules,
 };
 

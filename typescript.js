@@ -13,6 +13,8 @@ module.exports = {
 		'typescript/no-triple-slash-reference': 'error'
 	},
 	'parserOptions': {
+		'ecmaVersion': 6,
 		'sourceType': 'module'
 	},
+	'parser': 'typescript-eslint-parser'
 };
