@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-6river",
-  "version": "0.0.3",
+  "version": "0.0.0-development",
   "description": "ESLint shareable config for the 6RS style",
   "license": "Apache-2.0",
   "repository": "6RiverSystems/eslint-config-6river",
@@ -9,7 +9,9 @@
     "node": ">=7.4.0"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "posttest": "nsp check",
+    "commitmsg": "validate-commit-msg"
   },
   "files": [
     "*.js"
@@ -39,9 +41,38 @@
     "eslint-plugin-mocha": "4.11.0"
   },
   "devDependencies": {
-    "eslint": "^4.1.1"
+    "eslint": "^4.1.1",
+    "husky": "^0.14.3",
+    "nsp": "2.7.0",
+    "validate-commit-msg": "^2.12.1"
   },
   "peerDependencies": {
     "eslint": ">=4.1.1"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "Follow <type>(<scope>): <subject> pattern, max 100 chars.",
+      "autoFix": false
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
