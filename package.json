@@ -37,7 +37,8 @@
     "hint"
   ],
   "dependencies": {
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-mocha": "4.11.0"
   },
   "devDependencies": {
     "eslint": "^4.1.1",

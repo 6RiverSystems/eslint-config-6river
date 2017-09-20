@@ -32,7 +32,8 @@ const repoFiles = [
 // Use the rules defined in this repo to test against.
 const eslintOpts = {
 	useEslintrc: false,
-	envs: ['node', 'es6'],
+	envs: ['node', 'es6', 'mocha'],
+	'plugins': ['mocha'],
 	parserOptions: {ecmaVersion: 6},
 	rules: conf.rules,
 };
@@ -42,7 +43,8 @@ const cli = new eslint.CLIEngine(eslintOpts);
 const formatter = cli.getFormatter();
 const report = cli.executeOnFiles(repoFiles);
 
-console.log(formatter(report.results)); // eslint-disable-line
+const output = formatter(report.results);
+console.log(output); //eslint-disable-line no-console
 
 assert.equal(report.errorCount, 0);
 assert.equal(report.warningCount, 0);
