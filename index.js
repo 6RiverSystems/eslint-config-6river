@@ -2,6 +2,9 @@
 
 const config = {
 	'extends': 'google',
+	'plugins': [
+		'mocha'
+	],
 	'rules': {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
@@ -13,11 +16,13 @@ const config = {
 		'no-var': ['error'],
 		'strict': ['error', 'global'],
 		'eqeqeq': 'error',
-		'require-jsdoc': 'off'
+		'require-jsdoc': 'off',
+		'mocha/no-exclusive-tests': 'error',
 	},
 	'env': {
 		'node': true,
 		'es6': true,
+		'mocha': true,
 	},
 	'ecmaFeatures': {
 		'modules': true,
@@ -29,3 +34,4 @@ const config = {
 };
 
 module.exports = config;
+
