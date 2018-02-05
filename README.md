@@ -1,7 +1,7 @@
 # eslint-config-6river
 
 1. `npm i -D eslint-config-6river`
-2. Add oen of the following to `.eslintrc.json`:
+2. Add one of the following to `.eslintrc.json`:
   - TypeScript: `{"extends": "6river/typescript"}`
   - JavaScript: `{"extends": "6river"}`
   - mixed: `{"extends": "6river/typescript"}`
