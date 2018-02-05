@@ -10,7 +10,8 @@ module.exports = {
 		'no-undef': 'off',
 		"no-unused-vars": "off",
 		"typescript/no-unused-vars": "error",
-		'typescript/no-triple-slash-reference': 'error'
+		'typescript/no-triple-slash-reference': 'error',
+		"valid-jsdoc": "off"
 	},
 	'parserOptions': {
 		'ecmaVersion': 6,
