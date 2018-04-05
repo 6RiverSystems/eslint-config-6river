@@ -4,13 +4,20 @@ module.exports = {
 	'parser': 'typescript-eslint-parser',
 	'extends': '6river',
 	'plugins': [
-		'typescript'
+		'typescript',
+		'6river'
 	],
 	'rules': {
 		'no-undef': 'off',
 		"no-unused-vars": "off",
 		"typescript/no-unused-vars": "error",
-		'typescript/no-triple-slash-reference': 'error'
+		'typescript/no-triple-slash-reference': 'error',
+		'new-cap': 'off',
+		'6river/new-cap': [
+			'error', {
+				'capIsNewExceptionPattern': '^@'
+			}
+		]
 	},
 	'parserOptions': {
 		'sourceType': 'module'

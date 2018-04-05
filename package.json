@@ -35,7 +35,8 @@
     "hint"
   ],
   "dependencies": {
-    "eslint-config-google": "^0.7.1"
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-6river": "1.0.6"
   },
   "devDependencies": {
     "eslint": "^3.15.0"
