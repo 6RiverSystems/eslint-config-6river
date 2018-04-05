@@ -2,30 +2,39 @@
 
 const config = {
 	'extends': 'google',
+	'plugins': [
+		'mocha'
+	],
 	'rules': {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
-		'indent': ['error', 'tab'],
+		'indent': ['error', 'tab', {
+			'MemberExpression': 0
+		}],
+		'no-tabs': 'off',
 		'dot-location': ['error', 'property'],
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-console': ['error'],
 		'no-undef': ['error'],
 		'no-var': ['error'],
 		'strict': ['error', 'global'],
+		'object-shorthand': 'error',
+		'no-await-in-loop': 'error',
 		'eqeqeq': 'error',
-		'require-jsdoc': 'off'
+		'require-jsdoc': 'off',
+		'mocha/no-exclusive-tests': 'error',
 	},
 	'env': {
 		'node': true,
 		'es6': true,
+		'mocha': true,
 	},
-	'ecmaFeatures': {
-		'modules': true,
-		'classes': true,
-		'arrowFunctions': true,
-		'blockBindings': true,
-		'templateStrings': true
+	'parserOptions': {
+		'ecmaVersion': 6,
+		'ecmaFeatures': {
+		}
 	}
 };
 
 module.exports = config;
+

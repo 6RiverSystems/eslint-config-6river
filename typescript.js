@@ -17,9 +17,11 @@ module.exports = {
 			'error', {
 				'capIsNewExceptionPattern': '^@'
 			}
-		]
+		],
+		"valid-jsdoc": "off"
 	},
 	'parserOptions': {
+		'ecmaVersion': 6,
 		'sourceType': 'module'
-	},
+	}
 };
