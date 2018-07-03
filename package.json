@@ -38,11 +38,11 @@
   ],
   "dependencies": {
     "eslint-config-google": "^0.9.1",
-    "eslint-plugin-mocha": "4.11.0",
-    "eslint-plugin-6river": "1.0.6"
+    "eslint-plugin-6river": "1.0.6",
+    "eslint-plugin-mocha": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.1.1",
+    "eslint": "^5.0.1",
     "husky": "^0.14.3",
     "nsp": "2.7.0",
     "validate-commit-msg": "^2.12.1"
