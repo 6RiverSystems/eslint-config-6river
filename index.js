@@ -23,7 +23,9 @@ const config = {
 		'eqeqeq': 'error',
 		'require-jsdoc': 'off',
 		'mocha/no-exclusive-tests': 'error',
-		"space-in-parens": ["error", "never"]
+		'space-in-parens': ['error', 'never'],
+		'arrow-spacing': 'error',
+		'arrow-parens': 'error'
 	},
 	'env': {
 		'node': true,
