@@ -25,7 +25,14 @@ const config = {
 		'mocha/no-exclusive-tests': 'error',
 		'space-in-parens': ['error', 'never'],
 		'arrow-spacing': 'error',
-		'arrow-parens': 'error'
+		'arrow-parens': 'error',
+		'comma-dangle': ['error', {
+			"arrays": "always-multiline",
+			"objects": "always-multiline",
+			"imports": "always-multiline",
+			"exports": "always-multiline",
+			"functions": "always-multiline",
+		}]
 	},
 	'env': {
 		'node': true,
