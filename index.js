@@ -25,7 +25,8 @@ const config = {
 		'mocha/no-exclusive-tests': 'error',
 		'space-in-parens': ['error', 'never'],
 		'arrow-spacing': 'error',
-		'arrow-parens': 'error'
+		'arrow-parens': 'error',
+		'no-return-await': 'error',
 	},
 	'env': {
 		'node': true,
