@@ -18,7 +18,8 @@ module.exports = {
 				'capIsNewExceptionPattern': '^@'
 			}
 		],
-		"valid-jsdoc": "off"
+		"valid-jsdoc": "off",
+		"typescript/type-annotation-spacing": "error"
 	},
 	'parserOptions': {
 		'ecmaVersion': 6,
