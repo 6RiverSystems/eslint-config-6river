@@ -5,6 +5,9 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
+      - run:
+          name: Set Up Environment
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - restore_cache:
           key: |
             - dependency-cache-{{ checksum "package.json" }}
