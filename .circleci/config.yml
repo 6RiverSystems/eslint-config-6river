@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run:
           name: Set Up Environment
-          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          command: |
+            npm config set //registry.npmjs.org/:username 6river-machine
+            npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
       - restore_cache:
           key: |
             - dependency-cache-{{ checksum "package.json" }}
