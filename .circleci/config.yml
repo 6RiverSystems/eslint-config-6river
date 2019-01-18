@@ -8,7 +8,6 @@ jobs:
       - run:
           name: Set Up Environment
           command: |
-            npm config set //registry.npmjs.org/:username 6river-machine
             npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
       - restore_cache:
           key: |
@@ -38,6 +37,10 @@ jobs:
     docker:
       - image: circleci/node:lts
     steps:
+      - run:
+          name: Set Up Environment
+          command: |
+            npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
       - attach_workspace:
           at: ./
       - run:
