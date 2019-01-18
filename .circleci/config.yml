@@ -1,0 +1,58 @@
+version: 2
+jobs:
+  prep:
+    docker:
+      - image: circleci/node:7.5.0
+    steps:
+      - checkout
+      - run:
+          name: Set Up Environment
+          command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+      - restore_cache:
+          key: |
+            - dependency-cache-{{ checksum "package.json" }}
+            - dependency-cache-
+      - run:
+            name: Install Dependencies
+            command: npm ci
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - .
+  tests:
+    docker:
+      - image: circleci/node:7.5.0
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Unit Tests
+          command: npm test
+  publish:
+    docker:
+      - image: circleci/node:7.5.0
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Publish
+          command: ./scripts/release.sh
+workflows:
+  version: 2
+  test-publish:
+    jobs:
+      - prep:
+          context: 6rs-circle
+      - tests:
+          context: 6rs-circle
+          requires:
+            - prep
+      - publish:
+          context: 6rs-circle
+          requires:
+            - prep
+            - tests
