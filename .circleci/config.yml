@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Set Up Environment
-          command: 'echo "//registry.npmjs.org/:_authToken=${NPM_PASSWORD}" > ~/.npmrc'
+          command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
       - restore_cache:
           key: |
             - dependency-cache-{{ checksum "package.json" }}
@@ -46,13 +46,13 @@ workflows:
   test-publish:
     jobs:
       - prep:
-          context: 6rs-circle
+          context: 6rs-public-npm
       - tests:
-          context: 6rs-circle
+          context: 6rs-public-npm
           requires:
             - prep
       - publish:
-          context: 6rs-circle
+          context: 6rs-public-npm
           requires:
             - prep
             - tests
