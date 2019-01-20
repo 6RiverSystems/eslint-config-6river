@@ -1,5 +1,5 @@
 {
-  "name": "@6river/eslint-config-6river",
+  "name": "eslint-config-6river",
   "version": "0.0.0-development",
   "description": "ESLint shareable config for the 6RS style",
   "license": "Apache-2.0",
