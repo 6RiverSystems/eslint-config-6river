@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "eslint": "^5.0.1",
-    "husky": "^0.14.3",
+    "husky": "^2.3.0",
     "validate-commit-msg": "^2.12.1"
   },
   "peerDependencies": {
