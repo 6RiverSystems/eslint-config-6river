@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  prep:
+  build:
     docker:
       - image: circleci/node:lts
     steps:
@@ -8,43 +8,18 @@ jobs:
       - run:
             name: Install Dependencies
             command: npm ci
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - .
-  tests:
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - attach_workspace:
-          at: ./
       - run:
           name: Unit Tests
           command: npm test
-  publish:
-    docker:
-      - image: circleci/node:lts
-    steps:
       - run:
           name: Set Up Environment
           command: npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
-      - attach_workspace:
-          at: ./
       - run:
           name: Publish
           command: ./scripts/release.sh
 workflows:
   version: 2
-  test-publish:
+  build:
     jobs:
-      - prep:
+      - build:
           context: 6rs-public-npm
-      - tests:
-          context: 6rs-public-npm
-          requires:
-            - prep
-      - publish:
-          context: 6rs-public-npm
-          requires:
-            - prep
-            - tests
