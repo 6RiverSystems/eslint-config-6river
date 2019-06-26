@@ -10,7 +10,7 @@ if [ $? = 0 ]; then
 
 	# Force npm publish to output color
 	export NPM_CONFIG_COLOR='always'
-  publish_output="$(npm publish --access public --tag "$tag")"
+  publish_output="$(npm publish --access public --tag "$tag" 2>&1)"
 	retval=$?
 	echo -e "$publish_output"
 
