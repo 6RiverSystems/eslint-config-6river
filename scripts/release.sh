@@ -14,7 +14,10 @@ if [ $? = 0 ]; then
 	retval=$?
 	echo -e "$publish_output"
 
-	if [ $retval != 0 ] && echo "$publish_output" | grep --quiet 'cannot modify pre-existing version'; then
+	if [ $retval != 0 ] && echo "$publish_output" | grep --quiet --ignore-case \
+		--regexp 'cannot modify pre-existing version' \
+		--regexp 'cannot publish over the previously published versions' \
+	; then
 		echo
 		echo 'warning: version already exists, not publishing'
 		exit
