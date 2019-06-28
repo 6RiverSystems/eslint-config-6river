@@ -42,11 +42,11 @@
   "devDependencies": {
     "@6river/commitlint-config-6river": "^2.1.6",
     "@commitlint/cli": "^8.0.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "husky": "^2.3.0"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.0.1"
   },
   "husky": {
     "hooks": {
