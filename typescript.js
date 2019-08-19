@@ -11,7 +11,7 @@ module.exports = {
 		'no-undef': 'off',
 		"no-unused-vars": "off",
 		"@typescript-eslint/no-unused-vars": "error",
-		'@typescript-eslint/no-triple-slash-reference': 'error',
+		'@typescript-eslint/triple-slash-reference': 'error',
 		'new-cap': 'off',
 		'6river/new-cap': [
 			'error', {
