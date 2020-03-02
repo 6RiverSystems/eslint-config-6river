@@ -40,6 +40,7 @@ const config = {
 				},
 			},
 		],
+		'import/no-self-import': 'error',
 	},
 	'env': {
 		'node': true,
