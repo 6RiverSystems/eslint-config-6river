@@ -2,10 +2,13 @@
 
 module.exports = {
 	'parser': '@typescript-eslint/parser',
-	'extends': '6river',
+	'extends': [
+		'6river',
+		'plugin:import/typescript',
+	],
 	'plugins': [
 		'@typescript-eslint',
-		'6river'
+		'6river',
 	],
 	'rules': {
 		'no-undef': 'off',

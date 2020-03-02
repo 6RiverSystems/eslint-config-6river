@@ -18,6 +18,7 @@
 
 const assert = require('assert');
 const eslint = require('eslint');
+
 const conf = require('../');
 
 // The source files to lint.
@@ -33,7 +34,7 @@ const repoFiles = [
 const eslintOpts = {
 	useEslintrc: false,
 	envs: ['node', 'es6', 'mocha'],
-	'plugins': ['mocha'],
+	'plugins': ['import', 'mocha'],
 	parserOptions: {ecmaVersion: 6},
 	rules: conf.rules,
 };

@@ -3,13 +3,14 @@
 const config = {
 	'extends': 'google',
 	'plugins': [
-		'mocha'
+		'import',
+		'mocha',
 	],
 	'rules': {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
 		'indent': ['error', 'tab', {
-			'MemberExpression': 0
+			'MemberExpression': 0,
 		}],
 		'no-tabs': 'off',
 		'dot-location': ['error', 'property'],
@@ -25,7 +26,20 @@ const config = {
 		'mocha/no-exclusive-tests': 'error',
 		'space-in-parens': ['error', 'never'],
 		'arrow-spacing': 'error',
-		'arrow-parens': 'error'
+		'arrow-parens': 'error',
+		'import/order': [
+			'error',
+			{
+				'groups': [
+					['builtin', 'external'],
+					['internal', 'parent', 'sibling', 'index'],
+				],
+				'newlines-between': 'always',
+				'alphabetize': {
+					'order': 'asc',
+				},
+			},
+		],
 	},
 	'env': {
 		'node': true,
@@ -34,10 +48,7 @@ const config = {
 	},
 	'parserOptions': {
 		'ecmaVersion': 6,
-		'ecmaFeatures': {
-		}
-	}
+	},
 };
 
 module.exports = config;
-
