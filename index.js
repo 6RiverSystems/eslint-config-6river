@@ -41,6 +41,7 @@ const config = {
 			},
 		],
 		'import/no-self-import': 'error',
+		'import/newline-after-import': 'error',
 	},
 	'env': {
 		'node': true,
