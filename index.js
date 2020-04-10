@@ -31,7 +31,8 @@ const config = {
 			'error',
 			{
 				'groups': [
-					['builtin', 'external'],
+					['builtin'],
+					['external'],
 					['internal', 'parent', 'sibling', 'index'],
 				],
 				'newlines-between': 'always',
