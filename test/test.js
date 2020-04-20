@@ -17,6 +17,7 @@
 'use strict';
 
 const assert = require('assert');
+
 const eslint = require('eslint');
 
 const conf = require('../');
