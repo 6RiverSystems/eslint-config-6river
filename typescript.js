@@ -23,10 +23,25 @@ module.exports = {
 
 		],
 		"valid-jsdoc": "off",
-		"@typescript-eslint/type-annotation-spacing": "error"
+		"@typescript-eslint/type-annotation-spacing": "error",
+		"@typescript-eslint/no-floating-promises": "error"
 	},
 	'parserOptions': {
-		'ecmaVersion': 6,
+		'ecmaVersion': 2019,
+		'project': "tsconfig.json",
 		'sourceType': 'module'
+	},
+	'settings': {
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.tsx']
+		}
+		'import/resolver': {
+			'typescript': {
+				'alwaysTryTypes': true
+			},
+			'node': {
+				'extensions': ['.js','.jsx','.ts','tsx']
+			}
+		}
 	}
 };
