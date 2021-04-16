@@ -9,7 +9,12 @@ module.exports = {
 	],
 	plugins: ["@typescript-eslint", "6river"],
 	rules: {
+		"@typescript-eslint/ban-types": [
+			"error",
+			{ extendDefaults: true, types: { object: false } },
+		],
 		"@typescript-eslint/no-floating-promises": "error",
+		"@typescript-eslint/no-namespace": "off",
 		"@typescript-eslint/no-unused-vars": "error",
 		"@typescript-eslint/triple-slash-reference": "error",
 		"@typescript-eslint/type-annotation-spacing": "error",
