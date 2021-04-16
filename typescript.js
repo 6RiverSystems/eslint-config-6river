@@ -9,20 +9,16 @@ module.exports = {
 	],
 	plugins: ["@typescript-eslint", "6river"],
 	rules: {
-		"no-undef": "off",
-		"no-unused-vars": "off",
+		"@typescript-eslint/no-floating-promises": "error",
 		"@typescript-eslint/no-unused-vars": "error",
 		"@typescript-eslint/triple-slash-reference": "error",
-		"@typescript-eslint/no-floating-promises": "error",
-		"new-cap": "off",
-		"6river/new-cap": [
-			"error",
-			{
-				capIsNewExceptionPattern: "^@",
-			},
-		],
-		"valid-jsdoc": "off",
 		"@typescript-eslint/type-annotation-spacing": "error",
+		"@typescript-eslint/no-explicit-any": ["error", { ignoreRestArgs: true }],
+		"6river/new-cap": ["error", { capIsNewExceptionPattern: "^@" }],
+		"new-cap": "off",
+		"no-undef": "off",
+		"no-unused-vars": "off",
+		"valid-jsdoc": "off",
 	},
 	parserOptions: {
 		ecmaVersion: 6,
