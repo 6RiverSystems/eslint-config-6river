@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-            name: Install Dependencies
-            command: npm ci
+          name: Install Dependencies
+          command: npm ci
       - run:
           name: Unit Tests
           command: npm test

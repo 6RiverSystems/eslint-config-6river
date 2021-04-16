@@ -36,15 +36,18 @@
   ],
   "dependencies": {
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-6river": "1.0.6",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-mocha": "^8.0.0"
+    "eslint-plugin-6river": "^1.0.6",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-mocha": "^8.1.0"
   },
   "devDependencies": {
     "@6river/commitlint-config-6river": "^2.2.1",
+    "@6river/prettier-config": "^1.0.37",
     "@commitlint/cli": "^11.0.0",
-    "eslint": "^7.11.0",
-    "husky": "^6.0.0"
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1"
   },
   "peerDependencies": {
     "eslint": "^7.2.0"

@@ -1,27 +1,28 @@
 'use strict';
 
 const config = {
-	'extends': 'google',
-	'plugins': [
-		'import',
-		'mocha',
-	],
-	'rules': {
+	extends: 'google',
+	plugins: ['import', 'mocha'],
+	rules: {
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
-		'indent': ['error', 'tab', {
-			'MemberExpression': 0,
-		}],
+		indent: [
+			'error',
+			'tab',
+			{
+				MemberExpression: 0,
+			},
+		],
 		'no-tabs': 'off',
 		'dot-location': ['error', 'property'],
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-console': ['error'],
 		'no-undef': ['error'],
 		'no-var': ['error'],
-		'strict': ['error', 'global'],
+		strict: ['error', 'global'],
 		'object-shorthand': 'error',
 		'no-await-in-loop': 'error',
-		'eqeqeq': 'error',
+		eqeqeq: 'error',
 		'require-jsdoc': 'off',
 		'mocha/no-exclusive-tests': 'error',
 		'space-in-parens': ['error', 'never'],
@@ -30,27 +31,23 @@ const config = {
 		'import/order': [
 			'error',
 			{
-				'groups': [
-					['builtin'],
-					['external'],
-					['internal', 'parent', 'sibling', 'index'],
-				],
+				groups: [['builtin'], ['external'], ['internal', 'parent', 'sibling', 'index']],
 				'newlines-between': 'always',
-				'alphabetize': {
-					'order': 'asc',
+				alphabetize: {
+					order: 'asc',
 				},
 			},
 		],
 		'import/no-self-import': 'error',
 		'import/newline-after-import': 'error',
 	},
-	'env': {
-		'node': true,
-		'es6': true,
-		'mocha': true,
+	env: {
+		node: true,
+		es6: true,
+		mocha: true,
 	},
-	'parserOptions': {
-		'ecmaVersion': 6,
+	parserOptions: {
+		ecmaVersion: 6,
 	},
 };
 
