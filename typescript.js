@@ -4,7 +4,7 @@ module.exports = {
 	parser: "@typescript-eslint/parser",
 	extends: [
 		"6river",
-		"@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended",
 		"plugin:import/typescript",
 	],
 	plugins: ["@typescript-eslint", "6river"],
