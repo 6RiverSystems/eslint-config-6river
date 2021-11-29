@@ -19,6 +19,7 @@ module.exports = {
 		'no-undef': 'off',
 		'no-unused-vars': 'off',
 		'valid-jsdoc': 'off',
+		'no-invalid-this': 'off',
 	},
 	parserOptions: {
 		ecmaVersion: 6,
