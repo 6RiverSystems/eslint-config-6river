@@ -28,6 +28,7 @@ const config = {
 		'space-in-parens': ['error', 'never'],
 		'arrow-spacing': 'error',
 		'arrow-parens': 'error',
+		'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
 		'import/order': [
 			'error',
 			{
@@ -47,7 +48,7 @@ const config = {
 		mocha: true,
 	},
 	parserOptions: {
-		ecmaVersion: 6,
+		ecmaVersion: 8,
 	},
 };
 

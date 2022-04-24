@@ -15,14 +15,14 @@ module.exports = {
 		'@typescript-eslint/type-annotation-spacing': 'error',
 		'6river/new-cap': ['error', { capIsNewExceptionPattern: '^@' }],
 		'new-cap': 'off',
-		"no-cond-assign": [2, "always"],
+		'no-cond-assign': [2, 'always'],
 		'no-undef': 'off',
 		'no-unused-vars': 'off',
 		'valid-jsdoc': 'off',
 		'no-invalid-this': 'off',
 	},
 	parserOptions: {
-		ecmaVersion: 6,
+		ecmaVersion: 8,
 		sourceType: 'module',
 	},
 };
