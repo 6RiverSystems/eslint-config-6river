@@ -28,11 +28,10 @@ const eslintOpts = {
 	overrideConfig: {
 		env: {
 			node: true,
-			es6: true,
 			mocha: true,
 		},
 		plugins: ['import', 'mocha'],
-		parserOptions: { ecmaVersion: 8 },
+		parserOptions: { ecmaVersion: 'latest' },
 		rules: conf.rules,
 	},
 };
@@ -41,7 +40,7 @@ async function main() {
 	const eslint = new ESLint(eslintOpts);
 	const formatter = await eslint.loadFormatter();
 	const results = await eslint.lintFiles(repoFiles);
-	const output = formatter.format(results);
+	const output = await formatter.format(results);
 
 	console.log(output); //eslint-disable-line no-console
 
@@ -59,4 +58,4 @@ async function main() {
 	});
 }
 
-main();
+void main();

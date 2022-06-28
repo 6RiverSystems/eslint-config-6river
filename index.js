@@ -28,7 +28,6 @@ const config = {
 		'space-in-parens': ['error', 'never'],
 		'arrow-spacing': 'error',
 		'arrow-parens': 'error',
-		'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
 		'import/order': [
 			'error',
 			{
@@ -44,11 +43,10 @@ const config = {
 	},
 	env: {
 		node: true,
-		es6: true,
 		mocha: true,
 	},
 	parserOptions: {
-		ecmaVersion: 8,
+		ecmaVersion: 'latest',
 	},
 };
 
