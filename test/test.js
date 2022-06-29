@@ -31,7 +31,7 @@ const eslintOpts = {
 			mocha: true,
 		},
 		plugins: ['import', 'mocha'],
-		parserOptions: { ecmaVersion: 'latest' },
+		parserOptions: { ecmaVersion: 'es2020' },
 		rules: conf.rules,
 	},
 };

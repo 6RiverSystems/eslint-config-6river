@@ -46,7 +46,7 @@ const config = {
 		mocha: true,
 	},
 	parserOptions: {
-		ecmaVersion: 'latest',
+		ecmaVersion: 'es2020',
 	},
 };
 

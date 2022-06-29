@@ -22,7 +22,7 @@ module.exports = {
 		'no-invalid-this': 'off',
 	},
 	parserOptions: {
-		ecmaVersion: 'latest',
+		ecmaVersion: 'es2020',
 		sourceType: 'module',
 	},
 };
