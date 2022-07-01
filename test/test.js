@@ -18,32 +18,44 @@
 
 const assert = require('assert');
 
-const eslint = require('eslint');
+const { ESLint } = require('eslint');
 
 const conf = require('../');
 
-// The source files to lint.
 const repoFiles = ['index.js', 'mocha.js', 'typescript.js', 'angular.js', 'test/test.js'];
-
-// Use the rules defined in this repo to test against.
 const eslintOpts = {
 	useEslintrc: false,
-	envs: ['node', 'es6', 'mocha'],
-	plugins: ['import', 'mocha'],
-	parserOptions: { ecmaVersion: 6 },
-	rules: conf.rules,
+	overrideConfig: {
+		env: {
+			node: true,
+			mocha: true,
+		},
+		plugins: ['import', 'mocha'],
+		parserOptions: { ecmaVersion: 11 },
+		rules: conf.rules,
+	},
 };
 
-// Runs the linter on the repo files and asserts no errors were found.
-const cli = new eslint.CLIEngine(eslintOpts);
-const formatter = cli.getFormatter();
-const report = cli.executeOnFiles(repoFiles);
+async function main() {
+	const eslint = new ESLint(eslintOpts);
+	const formatter = await eslint.loadFormatter();
+	const results = await eslint.lintFiles(repoFiles);
+	const output = await formatter.format(results);
 
-const output = formatter(report.results);
-console.log(output); //eslint-disable-line no-console
+	console.log(output); //eslint-disable-line no-console
 
-assert.equal(report.errorCount, 0);
-assert.equal(report.warningCount, 0);
-repoFiles.forEach((file, index) => {
-	assert(report.results[index].filePath.endsWith(file));
-});
+	results.forEach((result) => {
+		assert.equal(
+			result.errorCount,
+			0,
+			`Expected ${result.filePath} to have 0 errors but instead it has ${result.errorCount} error(s)`,
+		);
+		assert.equal(
+			result.warningCount,
+			0,
+			`Expected ${result.filePath} to have 0 warnings but instead it has ${result.warningCount} warning(s)`,
+		);
+	});
+}
+
+void main();
