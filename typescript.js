@@ -10,6 +10,7 @@ module.exports = {
 		'@typescript-eslint/no-floating-promises': 'error',
 		'@typescript-eslint/no-namespace': 'off',
 		'@typescript-eslint/no-non-null-assertion': 'off',
+		'@typescript-eslint/no-unnecessary-condition': 'error',
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/triple-slash-reference': 'error',
 		'@typescript-eslint/type-annotation-spacing': 'error',
