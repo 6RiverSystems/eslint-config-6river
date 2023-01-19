@@ -6,7 +6,7 @@
   "repository": "6RiverSystems/eslint-config-6river",
   "author": "6 River Systems",
   "engines": {
-    "node": ">= 14.17.6"
+    "node": ">= 16.19.0"
   },
   "scripts": {
     "test": "node test/test.js"
