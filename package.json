@@ -6,7 +6,7 @@
   "repository": "6RiverSystems/eslint-config-6river",
   "author": "6 River Systems",
   "engines": {
-    "node": ">= 14.17.6"
+    "node": ">= 16.19.0"
   },
   "scripts": {
     "test": "node test/test.js"
@@ -34,14 +34,13 @@
     "enforce",
     "hint"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "@6river/commitlint-config-6river": "^2.2.77",
-    "@6river/prettier-config": "^1.0.63",
-    "@commitlint/cli": "^17.5.1",
+    "@6river/commitlint-config-6river": "2.3.2",
+    "@6river/prettier-config": "1.1.8",
+    "@commitlint/cli": "17.5.1",
     "eslint": "^8.37.0",
-    "eslint-config-prettier": "^8.5.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-6river": "^1.0.6",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.0.5",
@@ -49,11 +48,11 @@
     "prettier": "^2.8.7"
   },
   "peerDependencies": {
-    "@6river/commitlint-config-6river": "^2.2.77",
-    "@6river/prettier-config": "^1.0.63",
+    "@6river/commitlint-config-6river": "^2.3.2",
+    "@6river/prettier-config": "^1.1.8",
     "eslint": "^8.37.0",
-    "eslint-config-prettier": "^8.5.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-6river": "^1.0.6",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.0.5",
