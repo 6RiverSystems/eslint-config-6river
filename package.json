@@ -67,5 +67,9 @@
     "extends": [
       "@6river/commitlint-config-6river"
     ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
