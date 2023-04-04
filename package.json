@@ -41,7 +41,7 @@
     "eslint": "^8.37.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-6river": "^1.0.6",
+    "eslint-plugin-6river": "^2.0.7",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.0.5",
     "husky": "^8.0.1",
@@ -53,7 +53,7 @@
     "eslint": "^8.37.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-6river": "^1.0.6",
+    "eslint-plugin-6river": "^2.0.7",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.0.5",
     "prettier": "^2.8.7"
