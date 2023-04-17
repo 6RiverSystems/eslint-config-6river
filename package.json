@@ -37,7 +37,7 @@
   "devDependencies": {
     "@6river/commitlint-config-6river": "2.3.2",
     "@6river/prettier-config": "1.1.8",
-    "@commitlint/cli": "17.6.0",
+    "@commitlint/cli": "17.6.1",
     "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.8.0",
