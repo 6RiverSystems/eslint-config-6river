@@ -1,7 +1,7 @@
 'use strict';
 
 const config = {
-	extends: 'google',
+	extends: ['google', 'prettier'],
 	plugins: ['import', 'mocha'],
 	rules: {
 		curly: ['error', 'all'],
