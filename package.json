@@ -35,27 +35,26 @@
     "hint"
   ],
   "devDependencies": {
-    "@6river/commitlint-config-6river": "2.3.2",
-    "@6river/prettier-config": "1.1.8",
-    "@commitlint/cli": "17.6.1",
-    "eslint": "^8.39.0",
+    "@6river/commitlint-config-6river": "^2.3.4",
+    "@6river/prettier-config": "^1.2.17",
+    "@commitlint/cli": "^17.6.5",
+    "eslint": "^8.41.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-6river": "^2.0.7",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-mocha": "^10.0.5",
-    "husky": "^8.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8"
   },
   "peerDependencies": {
-    "@6river/commitlint-config-6river": "^2.3.2",
-    "@6river/prettier-config": "^1.1.8",
-    "eslint": "^8.39.0",
+    "@6river/prettier-config": "^1.2.17",
+    "eslint": "^8.41.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-6river": "^2.0.7",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-mocha": "^10.0.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
     "prettier": "^2.8.8"
   },
   "husky": {
