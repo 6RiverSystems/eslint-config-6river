@@ -4,19 +4,11 @@ const config = {
 	extends: ['google', 'prettier'],
 	plugins: ['import', 'mocha'],
 	rules: {
-		curly: ['error', 'all'],
+		// prettier owns most formatting rules now
 		'max-len': ['error', 120, 2],
+
+		curly: ['error', 'all'],
 		'prefer-const': ['error'],
-		indent: [
-			'error',
-			'tab',
-			{
-				MemberExpression: 0,
-			},
-		],
-		'no-tabs': 'off',
-		'dot-location': ['error', 'property'],
-		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-console': ['error'],
 		'no-undef': ['error'],
 		'no-var': ['error'],
@@ -26,9 +18,6 @@ const config = {
 		eqeqeq: 'error',
 		'require-jsdoc': 'off',
 		'mocha/no-exclusive-tests': 'error',
-		'space-in-parens': ['error', 'never'],
-		'arrow-spacing': 'error',
-		'arrow-parens': 'error',
 		'import/order': [
 			'error',
 			{
