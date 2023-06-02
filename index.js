@@ -5,7 +5,7 @@ const config = {
 	plugins: ['import', 'mocha'],
 	rules: {
 		// prettier owns most formatting rules now
-		'max-len': ['error', 120, 2],
+		'max-len': ['warn', 120, 2],
 
 		curly: ['error', 'all'],
 		'prefer-const': ['error'],
