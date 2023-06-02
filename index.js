@@ -4,6 +4,7 @@ const config = {
 	extends: 'google',
 	plugins: ['import', 'mocha'],
 	rules: {
+		curly: ['error', 'all'],
 		'max-len': ['error', 120, 2],
 		'prefer-const': ['error'],
 		indent: [
