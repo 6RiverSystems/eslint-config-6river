@@ -10,6 +10,7 @@ const config = {
 		curly: ['error', 'all'],
 		'prefer-const': ['error'],
 		'no-console': ['error'],
+		'no-fallthrough': ['error'],
 		'no-undef': ['error'],
 		'no-var': ['error'],
 		strict: ['error', 'global'],
