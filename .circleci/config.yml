@@ -22,7 +22,6 @@ jobs:
       - sixrs-gke/npm-public-publish
 
 workflows:
-  version: 2
   build:
     jobs:
       - build:
